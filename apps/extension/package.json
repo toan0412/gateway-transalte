@@ -1,0 +1,11 @@
+{
+  "name": "@tg/extension",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit && node build.mjs",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": { "@tg/shared": "workspace:*" },
+  "devDependencies": { "@types/chrome": "^0.0.280", "esbuild": "^0.21.5" }
+}

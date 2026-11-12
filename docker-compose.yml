@@ -1,0 +1,19 @@
+services:
+  gateway:
+    build: .
+    ports:
+      - "${PORT:-8787}:8787"
+    env_file: .env
+    environment:
+      DB_PATH: /data/gateway.db
+      PORT: "8787"
+    volumes:
+      - gateway-data:/data
+    restart: unless-stopped
+  # Tùy chọn: LibreTranslate tự host (docker compose --profile libre up)
+  libretranslate:
+    image: libretranslate/libretranslate
+    profiles: ["libre"]
+    ports: ["5000:5000"]
+volumes:
+  gateway-data:
