@@ -1,0 +1,15 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Translate Gateway — Options</title>
+<style>
+  body { font: 14px system-ui; max-width: 480px; margin: 24px auto; }
+  label { display: block; margin: 12px 0 2px; }
+  input, textarea { width: 100%; padding: 6px; box-sizing: border-box; }
+</style>
+<h2>Translate Gateway</h2>
+<label>URL gateway<input id="url" /></label>
+<label>Gateway key<input id="key" type="password" /></label>
+<label>Ngôn ngữ đích<input id="target" /></label>
+<label>Trang không dịch (mỗi dòng một tên miền)<textarea id="block" rows="4"></textarea></label>
+<p><button id="save">Lưu</button> <button id="check">Kiểm tra kết nối</button> <span id="msg"></span></p>
+<script src="options.js"></script>
